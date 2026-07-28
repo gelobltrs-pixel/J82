@@ -1,16 +1,25 @@
-#maze = {"A": ["B"], "B": ["A", "c"], "C":  ["B", "D"], "D": ["A", "C"]  }
-#start, goal = "A", "D"
-#frontier = maze[START]
-#search_space = list(maze.keys())
+maze = {
+    "A": ["B"],
+    "B": ["A", "C"],
+    "C": ["B", "D"],
+    "D": ["A", "C"]
+}
 
-#print(frontier)
-#print(search_space)
-#print(goal in frontier)
-from collections import deque
+start, goal = "A", "D"
+
+frontier = maze[start]   
+search_space = list(maze.keys())
+
+print(frontier)
+print(search_space)
+print(goal in frontier)      
+
+
+
 maze = {
 "A": ["B", "C"],
-"B": ["A", "C", "B"],
-"C": ["D", "E"],
+"B": ["A", "B", "F"],
+"C": ["A", "F"],
 "D": ["B"],
 "E": ["G"],
 "F": ["D", "F"],
